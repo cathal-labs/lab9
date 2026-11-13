@@ -2,7 +2,7 @@ name=$1
 number=$2
 
 if [ ${#name} -le 15 ] && [ ${#number} -le 10 ]; then
-	echo "pass"
+	echo "PASS"
 else
-	echo "fail"
+	echo "FAIL"
 fi
