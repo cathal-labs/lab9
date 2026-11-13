@@ -1,4 +1,3 @@
-
 name: Basic Tests
 
 on:
@@ -24,4 +23,3 @@ jobs:
       - name: Test mobile too long
         run: |
           ./validate-data.sh Cathal 1111112222233333444445555 | grep -x "FAIL"
-
