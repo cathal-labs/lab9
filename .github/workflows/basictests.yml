@@ -6,17 +6,21 @@ on:
   jobs:
     lab9-basic-test:
       runs-on: ubuntu-latest
+      
       steps:
          - name: Checkout repository
            uses: actions/checkout@v4
+           
          - name: Test valid name and mobile
            run: |
              chmod +x validate-data.sh
              ./validate-data.sh Cathal 123456789 | grep -x "PASS"
+             
          - name: Test name too long
            run: |
              chmod +x validate-data.sh
              ./validate-data.sh Cathalllllllllll 123456789 | grep -x "FAIL"
+             
          - name: Test mobile too long
            run: |
              chmod +x validate-data.sh
